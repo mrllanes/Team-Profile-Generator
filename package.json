@@ -1,0 +1,32 @@
+{
+  "name": "employeesdashboard",
+  "version": "1.0.0",
+  "description": "This is a Command Line Interface that will generate an Employee Dashboard Web Page",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "node index",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrllanes/Team-Profile-Generator.git"
+  },
+  "keywords": [
+    "CLI",
+    "Employees",
+    "NodeJS"
+  ],
+  "author": "Llanes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrllanes/Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/mrllanes/Team-Profile-Generator#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3",
+    "jest": "^26.6.3"
+  }
+}
