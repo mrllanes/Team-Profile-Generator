@@ -1,11 +1,17 @@
 // Node NPM required statements
 const inquirer = require("inquirer");
 const fs = require("fs");
+const openFile = require("open");
 const {
 	managerQuestions,
 	engineerQuestions,
 	internQuestions,
 } = require("./questions/questions");
+const {
+	managerCard,
+	engineerCard,
+	internCard,
+} = require("./src/templatesForAll");
 const Employee = require("./lib/Employee");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
@@ -13,17 +19,24 @@ const Intern = require("./lib/Intern");
 const template = require("./src/team-profile-template");
 const teamMembers = [];
 
-//Async Function
-async function create() {
+//Async Function that always starts with the Manager, pushes info to the array then moves to the Team
+async function startCLI() {
 	const managerInput = await inquirer.prompt(managerQuestions);
-	teamMembers.push(managerInput);
+	const newManager = new Manager(
+		managerInput.name,
+		managerInput.id,
+		managerInput.email,
+		managerInput.officeNumber
+	);
+	teamMembers.push(newManager);
 	console.log(managerInput);
 
 	createTeam();
 }
 
-create();
+startCLI();
 
+// Async Function to create the rest of the team, pushes info to array, when done calls function to create HTML
 async function createTeam() {
 	const userResponse = await inquirer.prompt({
 		type: "list",
