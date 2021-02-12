@@ -71,7 +71,18 @@ async function createTeam() {
 			break;
 		case "Done":
 			console.log(teamMembers);
+			console.log(
+				"Thank you for using the Llanes Team Profile Generator."
+			);
+			console.log(
+				"Your team's HTML profile page is being created and will now open in your browser."
+			);
+			createHTML();
 			// When "Done" is selected, call a seperate function to generate html template
 			break;
 	}
+}
+
+async function createHTML() {
+	// write function to pass the info from the array to the template/cards.
 }
