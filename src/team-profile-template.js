@@ -17,11 +17,7 @@ const createProfileTemplate = (cards) => `
 
     <div class="container">
         <div class="row empCardArea">
-            <div class="col">
-                <div class="container">
-                    ${cards}
-                </div> <!-- End container holding cards-->
-            </div>
+            ${cards}
         </div>
     </div>
 

@@ -16,7 +16,7 @@ const Employee = require("./lib/Employee");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
-const template = require("./src/team-profile-template");
+const makeTemplate = require("./src/team-profile-template");
 const teamMembers = [];
 
 //Async Function that always starts with the Manager, pushes info to the array then moves to the Team
@@ -98,6 +98,9 @@ async function createHTML() {
 		}
 	});
 	console.log(memberCards);
+	const HTMLOutput = await makeTemplate(memberCards.join);
+	await fs.writeFileSync("./src/team-page.html", HTMLOutput);
+	await openFile("./src/team-page.html");
 
 	// when creating the template, pass in "memberCards.join"
 	// use the writeFileSync to create the HTML page
