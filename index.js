@@ -26,7 +26,8 @@ async function startCLI() {
 		managerInput.name,
 		managerInput.id,
 		managerInput.email,
-		managerInput.officeNumber
+		managerInput.officeNumber,
+		managerInput.role
 	);
 	teamMembers.push(newManager);
 	console.log(managerInput);
@@ -51,7 +52,8 @@ async function createTeam() {
 				engineerInput.name,
 				engineerInput.id,
 				engineerInput.email,
-				engineerInput.github
+				engineerInput.github,
+				engineerInput.role
 			);
 			teamMembers.push(newEngineer);
 			console.log(engineerInput);
@@ -63,7 +65,8 @@ async function createTeam() {
 				internInput.name,
 				internInput.id,
 				internInput.email,
-				internInput.school
+				internInput.school,
+				internInput.role
 			);
 			teamMembers.push(newIntern);
 			console.log(internInput);
@@ -84,5 +87,18 @@ async function createTeam() {
 }
 
 async function createHTML() {
-	// write function to pass the info from the array to the template/cards.
+	// Function to pass the info from the array to the template/cards.
+	const memberCards = teamMembers.map((member) => {
+		if (member.getRole() === "Manager") {
+			return managerCard(member);
+		} else if (member.getRole() === "Engineer") {
+			return engineerCard(member);
+		} else {
+			return internCard(member);
+		}
+	});
+	console.log(memberCards);
+
+	// when creating the template, pass in "memberCards.join"
+	// use the writeFileSync to create the HTML page
 }
