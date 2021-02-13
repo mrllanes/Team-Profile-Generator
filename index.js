@@ -16,7 +16,7 @@ const Employee = require("./lib/Employee");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
-const makeTemplate = require("./src/team-profile-template");
+const createProfileTemplate = require("./src/team-profile-template");
 const teamMembers = [];
 
 //Async Function that always starts with the Manager, pushes info to the array then moves to the Team
@@ -73,7 +73,7 @@ async function createTeam() {
 			createTeam();
 			break;
 		case "Done":
-			console.log(teamMembers);
+			// console.log(teamMembers);
 			console.log(
 				"Thank you for using the Llanes Team Profile Generator."
 			);
@@ -81,13 +81,12 @@ async function createTeam() {
 				"Your team's HTML profile page is being created and will now open in your browser."
 			);
 			createHTML();
-			// When "Done" is selected, call a seperate function to generate html template
 			break;
 	}
 }
 
+// Function to pass the info from the array to the template/cards.
 async function createHTML() {
-	// Function to pass the info from the array to the template/cards.
 	const memberCards = teamMembers.map((member) => {
 		if (member.getRole() === "Manager") {
 			return managerCard(member);
@@ -97,8 +96,8 @@ async function createHTML() {
 			return internCard(member);
 		}
 	});
-	console.log(memberCards);
-	const HTMLOutput = await makeTemplate(memberCards.join);
+	// console.log(memberCards);
+	const HTMLOutput = await createProfileTemplate(memberCards);
 	await fs.writeFileSync("./src/team-page.html", HTMLOutput);
 	await openFile("./src/team-page.html");
 

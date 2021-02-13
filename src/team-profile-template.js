@@ -17,7 +17,7 @@ const createProfileTemplate = (cards) => `
 
     <div class="container">
         <div class="row empCardArea">
-            ${cards}
+            ${cards.join("")}
         </div>
     </div>
 
