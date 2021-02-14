@@ -1,20 +1,21 @@
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Team Profile Generator
 
 ## Deployed site
 
-N/A
+https://mrllanes.github.io/Team-Profile-Generator/
+
+Video Demo: https://youtu.be/LmU4_YsmMF0
 
 ## Table of Contents
 
-* [Description](#description)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Technology](#technology)
-* [Contributions](#contributions)
-* [Questions](#questions)
+-   [Description](#description)
+-   [Installation](#installation)
+-   [Usage](#usage)
+-   [Technology](#technology)
+-   [Contributions](#contributions)
+-   [Questions](#questions)
 
 ## Description
 
@@ -26,7 +27,7 @@ N/A
 
 ## Usage
 
-Simply run the "Node index" command in your terminal and answer all the wuestions as the come up. The first set of questions deal with the Team Manager. After, you have the option to enter info for Engineers or Interns. This will continue until you are done adding team members, when you are done adding members you can select "done" and an HTML page will be created displaying your "Team Profile" with wirking links to their emails and GitHub pages.
+Simply run the "Node index" command in your terminal and answer all the questions as the come up. The first set of questions deal with the Team Manager. After, you have the option to enter info for Engineers or Interns. This will continue until you are done adding team members. When you are done adding members you can select "done" and an HTML page will be created displaying your "Team Profile" with working links to their emails and GitHub pages.
 
 ## Technology Stack
 
@@ -45,4 +46,3 @@ llanesm@gmail.com
 
 You can also find more of my projects on my GitHub page:
 https://github.com/mrllanes
-
