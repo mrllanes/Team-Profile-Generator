@@ -3,7 +3,7 @@
 // Manager Card Template
 const managerCard = (data) => `
                 <div class="col-4 mb-3">
-                    <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                    <div class="card text-white bg-secondary mb-3">
                         <div class="card-header">${data.name}</div>
                         <div class="card-body">
                             <h5 class="card-title" id="Title"><i class="fas fa-gavel"></i> ${data.role}</h5>
@@ -18,7 +18,7 @@ const managerCard = (data) => `
 // Engineer Card Template
 const engineerCard = (data) => `
                 <div class="col-4 mb-3">
-                    <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                    <div class="card text-white bg-secondary mb-3">
                         <div class="card-header">${data.name}</div>
                         <div class="card-body">
                             <h5 class="card-title" id="Title"><i class="fas fa-users-cog"></i> ${data.role}</h5>
@@ -33,7 +33,7 @@ const engineerCard = (data) => `
 // Intern Card Template
 const internCard = (data) => `
                 <div class="col-4 mb-3">
-                    <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                    <div class="card text-white bg-secondary mb-3">
                         <div class="card-header">${data.name}</div>
                         <div class="card-body">
                             <h5 class="card-title" id="Title"><i class="fas fa-user-graduate"></i> ${data.role}</h5>

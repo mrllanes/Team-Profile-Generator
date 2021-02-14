@@ -99,8 +99,5 @@ async function createHTML() {
 	// console.log(memberCards);
 	const HTMLOutput = await createProfileTemplate(memberCards);
 	await fs.writeFileSync("./src/team-page.html", HTMLOutput);
-	await openFile("./src/team-page.html");
-
-	// when creating the template, pass in "memberCards.join"
-	// use the writeFileSync to create the HTML page
+	await openFile("/src/team-page.html");
 }

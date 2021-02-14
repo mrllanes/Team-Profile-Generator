@@ -1,3 +1,4 @@
+// This is the TEMPLATE for the HTML file that will be created when the Team Profile Generator "index.js" is executed
 const createProfileTemplate = (cards) => `
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +17,7 @@ const createProfileTemplate = (cards) => `
     </header>
 
     <div class="container">
-        <div class="row empCardArea">
+        <div class="row justify-content-between">
             ${cards.join("")}
         </div>
     </div>
